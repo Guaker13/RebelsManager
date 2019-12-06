@@ -87,6 +87,9 @@ GEM
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.3)
+    bundler-audit (0.6.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 0.18)
     byebug (11.0.1)
     capybara (3.29.0)
       addressable
@@ -142,8 +145,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
     json (2.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -176,7 +177,8 @@ GEM
     orm_adapter (0.5.0)
     pg (1.1.4)
     public_suffix (4.0.1)
-    puma (3.12.1)
+    puma (4.3.1)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-cors (1.1.0)
       rack (>= 2.0.0)
@@ -281,6 +283,8 @@ GEM
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
     spring (2.1.0)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
@@ -339,6 +343,7 @@ DEPENDENCIES
   better_errors
   blind_index
   bootsnap (>= 1.4.2)
+  bundler-audit
   byebug
   capybara (>= 2.15)
   database_cleaner
@@ -348,35 +353,37 @@ DEPENDENCIES
   ffaker
   gettext (>= 3.0.2)
   gettext_i18n_rails
-  jbuilder (~> 2.5)
-  listen (>= 3.0.5, < 3.2)
+  listen (>= 3.0.5, < 3.3)
   lockbox
   logstop
   pg (>= 0.18, < 2.0)
-  puma (~> 3.11)
+  puma (~> 4)
+  rack
   rack-cors
   rails (~> 6.0.0)
+  redis (~> 4.1)
   rest-client
   rspec-rails
   ruby_parser
   sass-rails (~> 5)
   selenium-webdriver
   sentry-raven
-  sidekiq (= 5.2.7)
+  sidekiq
   simple_form (~> 5.0)
   simplecov
   slim (~> 4.0)
   spring
+  spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
   validates_email_format_of
   web-console (>= 3.3.0)
   webdrivers
-  webpacker (~> 4.0)
+  webpacker (~> 4.2)
 
 RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   2.0.2
+   1.17.3
